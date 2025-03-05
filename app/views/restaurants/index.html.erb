@@ -1,0 +1,9 @@
+<h1>Welcome to the restaurant finder</h1>
+<ul>
+<% @restaurants.each do |restaurant| %>
+<li>
+<%= link_to restaurant.name, restaurant_path(restaurant) %>
+</li>
+<% end %>
+</ul>
+<%= link_to 'Add a restaurant', new_restaurant_path %>
